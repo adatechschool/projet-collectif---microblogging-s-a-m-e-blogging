@@ -17,7 +17,6 @@ class PostController extends Controller
     {
         //On récupère tous les Post
         $posts = Post::all();
-        print($posts);
         // On transmet les Post à la vue
         return view("posts.index", compact("posts"));
     }
@@ -91,10 +90,13 @@ class PostController extends Controller
         // 1. La validation
 
     // Les règles de validation pour "title" et "content"
-    $rules = [
+  /*   $rules = [
         'description' => 'bail|required|string|max:255',
-        "content" => 'bail|required',
-    ];
+    ]; */
+
+    /* $validated = $request->validate([
+        'description' => 'required|unique:posts|max:255',
+    ]); */   
 
     // Si une nouvelle image est envoyée
     if ($request->has("img_url")) {
@@ -102,7 +104,7 @@ class PostController extends Controller
         $rules["img_url"] = 'bail|required|image|max:1024';
     }
 
-    $this->validate($request, $rules);
+    // $this->validate($request, $rules);
 
     // 2. On upload l'image dans "/storage/app/public/posts"
     if ($request->has("img_url")) {
@@ -117,11 +119,14 @@ class PostController extends Controller
     $post->update([
         "description" => $request->description,
         "img_url" => isset($chemin_image) ? $chemin_image : $post->img_url,
-        "content" => $request->content
+        // "content" => $request->content
     ]);
 
     // 4. On affiche le Post modifié : route("posts.show")
-    return redirect(route("posts.show", $post));
+    // return redirect(route("posts.show", $post));
+
+    //return view("posts.show", $post);
+    return view('posts.show', ['post' => $post]);
     }
 
     /**

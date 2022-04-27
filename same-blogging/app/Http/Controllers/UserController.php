@@ -14,7 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        print('hello');
+        return view("users.dashboard");
     }
 
     /**
@@ -46,7 +47,9 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return view("users.profile", [
+            'user' => $user
+        ]);
     }
 
     /**
@@ -57,7 +60,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        $user = User::where('id', '=', $user)->first();
+        return view('users.profile', compact('user'));
     }
 
     /**
@@ -69,7 +73,11 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $user = User::find($user)->first();
+        $user->biography = $request->biography;
+        $user->save();
+        
+        return view('users.profile', compact('user'));
     }
 
     /**

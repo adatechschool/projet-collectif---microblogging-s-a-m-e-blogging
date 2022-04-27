@@ -60,4 +60,6 @@
 
 	</form>
 
+	<p><a href="{{ route('posts.index') }}" title="Retourner aux articles" >Retourner aux posts</a></p>
+
 @endsection
