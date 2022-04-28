@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
+
+* {
+    background-color: #ffaad2;
+}
+
+table>thead>tr>th {
+    color: rgb(165, 33, 167);
+}
+
+navbar {
+    display: flex;
+    justify-content: center;
+    font-family: 'Londrina Shadow';
+    font-size: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgb(149, 148, 148);
+}
+
+navbar img {
+    margin-right: 20px;
+    width: 9%;
+    background-color: white;
+}
+
+navbar h1 {
+    margin:55px 0 30px 0;
+    background-color: white;
+}
+
+#body-index {
+    display: flex;
+    flex-direction: column;
+    margin:4% 25% 0 25% ;
+    font-family: 'Chakra Petch', sans-serif;
+    color: rgb(95, 6, 96);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(95, 6, 96);
+}
+
+table th {
+    padding: 10px 0 10px 0;
+    font-size: 25px;
+    color: rgb(95, 6, 96);
+}
+
+table td {
+    padding: 8px 0 8px 0;
+    font-size: 20px;
+}
+
+#new-post {
+    padding: 15px;
+    width: 20%;
+    border-radius: 10px;
+}
+
+#new-post:hover {
+    background-color: rgb(95, 6, 96);
+    cursor: pointer;
+}
+#new-post a:hover {
+    background-color: rgb(95, 6, 96);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+
+.edit-post-one {
+    display: flex;
+    justify-content: center;
+    padding: 20px 50px 20px 50px;
+} 
+
+.edit-post-two {
+    justify-content: center;
+    padding: 10px 50px 10px 50px;
+} 
+
+.title a {
+    margin-left: 20px;
+}
+
+#edit-posts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.button-return-article {
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: white;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+}
+
+.button-return {
+    margin-top: 170px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 46%;
+}
+
+.validate-button {
+    background-color: white;
+    color: rgb(245, 167, 236);
+    border-radius: 10px;
+    border-style: none;
+    font-size: 25px;
+    background-color: white;
+    padding: 10px 150px 10px 150px;
+    cursor: pointer;
+}
+
+.validate-button:hover {
+    background-color: rgb(95, 6, 96);
+}
+
+.label {
+    font-size: 30px;
+}
+
+div input {
+    font-size: 20px;
+}
+
+#post-title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#description {
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.post-img {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+input[type=file]::file-selector-button {
+    font-family: 'Chakra Petch', sans-serif;
+    margin-right: 15px;
+}
+
+#post-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+#post-content h1 {
+    border: 5px solid rgb(95, 6, 96);
+    padding: 20px 40px 20px 40px;
+}
+
+
